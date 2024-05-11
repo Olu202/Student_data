@@ -3,15 +3,18 @@
 The code imports libraries pandas (for data manipulation) and numpy (for numerical operations).
 Two CSV files, mark.csv and student.csv, are loaded into separate DataFrames named df1 and df2 respectively.
 df1.info() and df2.info() display information about the DataFrames, including data types and number of columns.
+
 **2. Data Merging:**
 
 It's assumed both DataFrames share a common Student_id column.
 pd.merge(df1, df2) combines df1 and df2 based on the Student_id column, creating a new DataFrame combined_df.
 combined_df.head() displays the first few rows of the merged DataFrame.
+
 **3. Data Quality Assessment:**
 
 combined_df.isnull().sum() checks for missing values in the merged DataFrame. There are none in this case.
 combined_df.describe() provides summary statistics for numerical columns (Student_id, Mark, Age).
+
 **4. Data Analysis and Feature Engineering:**
 
 combined_df['Employed'].value_counts() counts the occurrences of "yes" and "no" in the Employed column.
